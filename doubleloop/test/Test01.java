@@ -19,9 +19,9 @@ public class Test01 {
 //        (6, 1) (6, 2) (6, 3) (6, 4) (6, 5) (6, 6)
 
         //행
-        for(int i = 1; i <= 6; i++){
+        for (int i = 1; i <= 6; i++) {
             //열
-            for(int j = 1; j <= 6; j++){
+            for (int j = 1; j <= 6; j++) {
                 System.out.print("(" + i + ", " + j + ")");
             }
             System.out.println();
@@ -106,9 +106,9 @@ public class Test01 {
 //        9 X 9 = 81
 
         //구구단 앞 숫자
-        for(int i = 2; i <= 9; i++) {
+        for (int i = 2; i <= 9; i++) {
             // 구구단 뒷 숫자
-            for(int j = 1; j <= 9; j++) {
+            for (int j = 1; j <= 9; j++) {
                 System.out.println(i + " X " + j + " = " + (i * j));
             }
         }
@@ -147,12 +147,97 @@ public class Test01 {
 //        **
 //        *
 
-        for(int i = 5; i >= 1; i--) {
-            for(int j = 1; j <= i; j++) {
+//        for (int i = 5; i >= 1; i--) {
+//            for (int j = 1; j <= i; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
+        for(int i = 5; i > 0; i--) {
+            for(int j = 0; j < i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
+
+        System.out.println("\n====================\n");
+
+//        5. 별찍기 3
+//        아래 형태처럼 *을 출력하세요.
+//        출력 예시
+//
+//            *
+//           **
+//          ***
+//         ****
+//        *****
+
+//        for (int i = 1; i <= 5; i++) {
+//            for (int j = 1; j <= 5 - i; j++) {
+//                System.out.print(" ");
+//            }
+//            for (int k = 1; k <= i; k++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
+        for(int i = 1; i <= 5; i++) {
+            // 5 5 5 5 5
+            // 1 2 3 4 5
+            // 4 3 2 1 0
+            int count = 5 - i;
+            for(int j = 0; j < count; j++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j < i; j++) { // for문 안의 for문이 아닌 바깥쪽이기에 j를 다시 사용해도 문제없다!
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+        System.out.println("\n====================\n");
+
+
+
+//        6. 별찍기 4
+//        아래 형태처럼 *을 출력하세요.
+//        출력 예시
+//
+//            *
+//           ***
+//          *****
+//         *******
+//        *********
+
+//        for (int i = 1; i <= 5; i++) {
+//            for (int j = 1; j <= 5 - i; j++) {
+//                System.out.print(" ");
+//            }
+//            for (int j = 1; j <= (i * 2) - 1; j++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
+        for(int i = 1; i <= 5; i++) {
+            int count = 5 - i;
+            for(int j = 0; j < count; j++){
+                System.out.print(" ");
+            }
+
+            // 1 2 3 4 5
+            // 1 3 5 7 9
+            // 2n - 1
+            count = 2 * i - 1;
+            for(int j = 0; j < count; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
 
     }
 }

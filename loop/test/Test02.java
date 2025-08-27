@@ -108,12 +108,11 @@ public class Test02 {
 //            for()
 //        }
 
-//        int max = Integer.MIN_VALUE;
         int max = 0;
         for(int i = 0; i < 5; i++) {
             System.out.println("수를 입력하세요 : ");
-            int k = scan.nextInt();
-            if (k > max) max = k;
+            int j = scan.nextInt();
+            if (j > max) max = j;
         }
 
         System.out.println("가장 큰 수 : " + max);
