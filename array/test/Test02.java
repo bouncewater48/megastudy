@@ -17,12 +17,17 @@ public class Test02 {
 //
 //        3 5 16 10 39
 
+        //
         System.out.print("변경할 index와 값을 입력하세요(~4, 숫자) : ");
         int number = scan.nextInt();
         int newNumber = scan.nextInt();
-//        numbers[3] = 16;
+//        numbers[2] = 16;
+
+        // 한번만 입력되면 되기에 반복문 내부에 작성할 필요가 없음
+        numbers[number] = newNumber;
+
         for (int i = 0; i < numbers.length; i++) {
-            numbers[number] = newNumber;
+//            numbers[number] = newNumber;
             System.out.print(numbers[i] + " ");
         }
         System.out.println();
@@ -38,7 +43,9 @@ public class Test02 {
         int total = 0;
 
         for (int i = 0; i < scores.length; i++) {
+            // 만약 scores 배열에 저장된 값이 O라면
             if (scores[i] == 'O') {
+                // total에 10씩 더한다
                 total += 10;
             }
         }
@@ -62,9 +69,9 @@ public class Test02 {
         for (int i = 0; i < works.length; i++) {
             if (i <= 4) {
 //                weekdays += 8500;
-                totalPay += weekdaysPay * works[i];
+                totalPay += works[i] * weekdaysPay;
             } else {
-                totalPay += weekendPay * works[i];
+                totalPay += works[i] * weekendPay;
             }
             // totalPay에 누적해서 값이 더해지기에 굳이 변수를 2개 만들 필요가 없다!
 
@@ -93,6 +100,7 @@ public class Test02 {
         int count = 0;
 
         for (int i = 0; i < array.length; ) {
+            // 매 루프마다 입력이 들어가야하므로 스캐너도 반복문 내부에 작성한다
             System.out.print("수를 입력하세요 : ");
             int evenNumber = scan.nextInt(); //짝수 선언
             if (evenNumber % 2 == 0) {
