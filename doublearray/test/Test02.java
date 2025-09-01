@@ -1,4 +1,5 @@
 package doublearray.test;
+
 // 8. 이차원 배열 : 연습문제; 이차원 배열 입력
 public class Test02 {
     public static void main(String[] args) {
@@ -13,8 +14,8 @@ public class Test02 {
 
         int[][] number = new int[2][3];
 
-        for(int i = 0; i < number.length; i++) {
-            for(int j = 0; j < number[i].length; j++) {
+        for (int i = 0; i < number.length; i++) {
+            for (int j = 0; j < number[i].length; j++) {
                 number[i][j] = 10;
             }
         }
@@ -40,8 +41,8 @@ public class Test02 {
 
         int[][] number2 = new int[3][4];
 
-        for(int i = 0; i < number2.length; i++) {
-            for(int j = 0; j < number2[i].length; j++) {
+        for (int i = 0; i < number2.length; i++) {
+            for (int j = 0; j < number2[i].length; j++) {
                 number2[i][j] = j + 1;
                 System.out.print(number2[i][j] + " ");
             }
@@ -61,8 +62,8 @@ public class Test02 {
 
         int[][] number3 = new int[3][3];
 
-        for(int i = 0; i < number3.length; i++) {
-            for(int j = 0; j < number3[i].length; j++) {
+        for (int i = 0; i < number3.length; i++) {
+            for (int j = 0; j < number3[i].length; j++) {
                 number3[i][j] = i + 1;
                 System.out.print(number3[i][j] + " ");
             }
@@ -85,8 +86,18 @@ public class Test02 {
 
         int[][] number4 = new int[5][5];
 
-        for(int i = 0; i < number4.length; i++) {
-            for(int j = 0; j < number4[i].length; j++) {
+//        for(int i = 0; i < number4.length; i++) {
+//            for(int j = 0; j < number4[i].length; j++) {
+//                if(number4[i] || number4[j]){
+//
+//                }
+//            }
+//        }
+
+
+
+        for (int i = 0; i < number4.length; i++) {
+            for (int j = 0; j < number4[i].length; j++) {
                 number4[i][2] = 1;
                 number4[2][j] = 1;
                 System.out.print(number4[i][j] + " ");
@@ -108,11 +119,15 @@ public class Test02 {
 
         int[][] number5 = new int[3][3];
 
-        for(int i = 0; i < number5.length; i++) {
-            for(int j = 0; j < number5[i].length; j++){
-                number5[0][j] = j + 1;
-                number5[1][j] = 4 + j;
-                number5[2][j] = 7 + j;
+        int numbers = 1;
+        for (int i = 0; i < number5.length; i++) {
+            for (int j = 0; j < number5[i].length; j++) {
+                number5[i][j] = numbers;
+                numbers++;
+//                number5[i][j] = j + 1 + (i * 3);
+//                number5[0][j] = j + 1;
+//                number5[1][j] = 4 + j;
+//                number5[2][j] = 7 + j;
                 System.out.print(number5[i][j] + " ");
             }
             System.out.println();
@@ -128,9 +143,36 @@ public class Test02 {
 //        2 5 8
 //        3 6 9
 
+
+        System.out.println("=============================");
+
         int[][] number6 = new int[3][3];
 
-        for
+        for (int i = 0; i < number6.length; i++) {
+            for (int j = 0; j < number6[i].length; j++) {
+                // j : 0 1 2
+                //     0 3 6
+                number6[i][j] = i + 1 + (j * 3);
+//                number6[j][i] = numbers;
+//                numbers++;
+                // 00 01 02 10 11 12 20 21 22
+                // 00 10 20 01 11 21 02 12 22
+
+                System.out.print(number6[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+//        for (int i = 0; i < number6.length; i++) {
+//            for (int j = 0; j < number6[i].length; j++) {
+//                number6[i][0] = i + 1;
+//                number6[i][1] = 4 + i;
+//                number6[i][2] = 7 + i;
+//                System.out.print(number6[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
 
     }
 }
