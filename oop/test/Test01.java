@@ -74,17 +74,19 @@ public class Test01 {
 
         System.out.println("=============================");
 
-        String[][] students = {
-                {"유재석", "21", "Java", "010-0000-1111"},
-                {"이효리", "23", "웹 개발", "010-9999-2222"}
-        };
+        Student[] students;
 
-        for (int i = 0; i < students.length; i++) {
-            System.out.println(
-                    students[i][0] + " (" + students[i][1] + ") 수업 : " +
-                            students[i][2] + ", 연락처 : " + students[i][3]
-            );
-        }
+//        String[][] students = {
+//                {"유재석", "21", "Java", "010-0000-1111"},
+//                {"이효리", "23", "웹 개발", "010-9999-2222"}
+//        };
+//
+//        for (int i = 0; i < students.length; i++) {
+//            System.out.println(
+//                    students[i][0] + " (" + students[i][1] + ") 수업 : " +
+//                            students[i][2] + ", 연락처 : " + students[i][3]
+//            );
+//        }
 
 
 
