@@ -1,4 +1,4 @@
-package array.test;
+package array.test.test01;
 // 7. 배열 : 연습문제; 배열 기본 사용법
 public class Test01 {
     public static void main(String[] args) {

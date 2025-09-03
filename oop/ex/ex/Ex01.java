@@ -1,4 +1,5 @@
-package oop.ex;
+package oop.ex.ex;
+
 // 01. 클래스
 public class Ex01 {
     public static void main(String[] args) {

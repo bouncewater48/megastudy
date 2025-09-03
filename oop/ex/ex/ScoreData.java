@@ -1,4 +1,4 @@
-package oop.ex;
+package oop.ex.ex;
 // 01. 클래스
 // 클래스 : 규격
 public class ScoreData {

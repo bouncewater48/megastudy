@@ -1,4 +1,4 @@
-package oop.test;
+package oop.test.test01;
 // 클래스 : 연습문제; Class 속성
 public class Test01 {
     public static void main(String[] args) {
@@ -74,7 +74,13 @@ public class Test01 {
 
         System.out.println("=============================");
 
-        Student[] students;
+//        Student[] students = new Student[2];
+        Student[] students = {Jeasuk, Hyori};
+
+        for (int i = 0; i < students.length; i++) {
+            System.out.println(students[i].name + "(" + students[i].age + ") 수업 : " // students[i] 자체가 객체이므로 .name으로 이름을 가져옴
+                    + students[i].Class + ", 연락처 : " + students[i].phoneNum);
+        }
 
 //        String[][] students = {
 //                {"유재석", "21", "Java", "010-0000-1111"},
