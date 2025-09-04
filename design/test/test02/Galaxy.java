@@ -21,7 +21,6 @@ public class Galaxy {
         this.company = company;
         this.model = model;
         this.serialNum = serialNum;
-        this.phoneNum = phoneNum;
     }
 
     // 제조사 및 모델명 확인
