@@ -47,30 +47,17 @@ public class Test01 {
         System.out.println("=============================");
 
         Product snack = new Product();
-        snack.productInfo("새우깡", 1300, "2021-03-02");
+        snack.productInfo("새우깡", 1300, "2025-08-12");
 
-        System.out.println("제품 5개의 가격 : " + snack.priceCount(5));
-        System.out.println("제품 13개의 가격 : " + snack.priceCount(13));
+        System.out.println("제품 5개의 가격 : " + snack.calculatePrice(5));
+        System.out.println("제품 13개의 가격 : " + snack.calculatePrice(13));
 
 //        유통기한이 지나지 않았을 경우 "판매 가능 상품", 유통기한이 지났을 경우 "판매 불가 상품" (option)
-//        날짜계산 참고링크 :
-//        https://hajoung56.tistory.com/67#google_vignette
 
-        // 판매 가능 여부 확인 기능
-        // 이 방식으로도 접근해볼것!
-//        boolean availableSale(String date) {
-//
-//        }
-
-        LocalDate dateNow = LocalDate.of(2021, 03, 02);
-        LocalDate date1 = LocalDate.of(2021, 02, 20);
-        LocalDate date2 = LocalDate.of(2021, 03, 05);
-
-//        if(date1.isBefore(dateNow)) {
-        if (date2.isBefore(dateNow)) {
-            System.out.println("판매 가능 상품");
+        if(snack.availableSell("2025-09-04")) {
+            System.out.println("판매 가능");
         } else {
-            System.out.println("판매 불가 상품");
+            System.out.println("판매 불가");
         }
     }
 }

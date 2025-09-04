@@ -24,8 +24,14 @@ public class Test02 {
 //        김인규학생에게 (010-0000-1111) 수업일정 메시지를 전송 합니다.
 //        김인규학생에게 (010-0000-1111) 잘하자! 라고 전송 합니다.
 
+        // 학생 정보
+        Student stu = new Student("강승훈", "낙성대학교", "010-0000-1111", "java");;
 
-
+        stu.stuInfo();
+        stu.setSchool("첨성대학교");
+        stu.stuInfo2();
+        stu.message();
+        stu.cheering();
 
 //        2. 갤럭시 객체
 //        갤럭시 Class를 설계하세요.
@@ -46,5 +52,14 @@ public class Test02 {
 //        일련 번호 : 1234567890
 //        010-0000-9999 로 전화를 겁니다 뚜르르르르...
 //        010-1234-5678 로 "자니?" 메시지를 전송 합니다.
+
+        System.out.println("========================");
+
+        // 핸드폰 정보
+        Galaxy galaxy = new Galaxy("삼성","Galaxy", "1234567890", "010-111-2222");
+        
+        galaxy.phoneInfo();
+        galaxy.call("010-0000-9999");
+        galaxy.message("010-1234-5678", "자니?");
     }
 }

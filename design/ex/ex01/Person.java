@@ -1,4 +1,5 @@
 package design.ex.ex01;
+
 // 클래스 설계
 public class Person {
 
@@ -7,7 +8,7 @@ public class Person {
     //  private : 해당 클래스 내에서만 사용 가능
     private String name;
     private String birthday;
-    
+
     // 생성자
     // 객체를 생성할때 호출하는 특수한 형태의 메서드
     // 모든 클래스는 생성자를 포함하고 있으며, 생성자가 없다면 기본 생성자를 지니고 있다
@@ -22,11 +23,25 @@ public class Person {
         this.birthday = birthday;
     }
 
-    
+
     // 객체 정보 출력 기능
     // public : 모든 곳에서 사용 가능
     public void printInfo() {
         System.out.println("이름 : " + name + "\n생년월일 : " + birthday);
     }
+
+    // setter
+    // name 변수 수정 기능
+    public void setName(String name) {
+
+        this.name = name;
+    }
+
+    // getter
+    // birthday 리턴하는 기능
+    public String getBirthday() {
+        return birthday;
+    }
+    
 
 }
