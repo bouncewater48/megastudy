@@ -1,6 +1,7 @@
-package design.test03;
+package design.test.test03;
 
 public class Test03 {
+    public static void main(String[] args) {
 
 //    1. OMR 카드
 //    객관식 문제 5개를 체크하는 OMR 카드를 만들고, OMR 카드를 통해 점수를 출력하는 Class를 작성하세요.
@@ -22,8 +23,25 @@ public class Test03 {
 //    학번 : 1234567890
 //    점수 : 60
 
-    String name = "강승훈";
-    String stuId = "1234567890";
+        OmrCard omrCard = new OmrCard("강승훈", "123456789");
+        omrCard.setMarking(3, 4, 5, 3, 3);
 
+        omrCard.printInfo();
 
+        OmrCardReader reader = new OmrCardReader();
+        reader.setAnswer(3, 4, 4, 4, 3);
+
+        reader.printInfo();
+
+        System.out.println("=======================");
+
+        reader.printScore(omrCard);
+
+//        int score = reader.checkScore(omrCard);
+//        omrCard.printStudentInfo();
+//        System.out.println("점수 : " + score);
+
+//        reader.checkScore(omrCard);
+
+    }
 }
