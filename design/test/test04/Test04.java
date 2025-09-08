@@ -25,5 +25,35 @@ public class Test04 {
 //        3 9 14 23 43 32 꽝!
 //                1 14 45 11 16 22 5등
 
+//        Lotto lotto = new Lotto();
+//
+//        lotto.manual(4, 5, 12, 19, 20, 35);
+//
+//        lotto.printInfo();
+//
+        LottoChecker checker = new LottoChecker();
+        // 수동 입력번호
+//        checker.setWinningNumber(3, 4, 12, 19, 35, 40);
+        // 자동 입력번호
+        checker.drawLots();
+        checker.printInfo();
+//        int count = checker.checkCount(lotto);
+//        System.out.println(count + "개");
+//        checker.printResult(lotto);
+
+        for(int i = 0; i < 10000; i++) {
+            Lotto lotto = new Lotto();
+            lotto.auto();
+            if(checker.checkCount(lotto) == 6) {
+                System.out.println("1등!!!");
+            }
+        }
+
+        Lotto lotto2 = new Lotto();
+        lotto2.auto();
+//        lotto2.printInfo();
+        checker.printResult(lotto2);
+
+
     }
 }
