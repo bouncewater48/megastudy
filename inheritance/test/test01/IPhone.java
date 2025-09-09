@@ -5,7 +5,6 @@ public class IPhone extends IPodTouch {
     private String phoneNumber;
 
     public IPhone(String model, String phoneNumber) {
-        super(model);
         this.setModel(model);
         this.phoneNumber = phoneNumber;
     }
@@ -24,14 +23,5 @@ public class IPhone extends IPodTouch {
     public String getPhoneNumber() {
         return phoneNumber;
     }
-
-    // Override
-    @Override
-    public void setModel() {
-        super.setModel();
-        System.out.println();
-    }
-
-
 
 }

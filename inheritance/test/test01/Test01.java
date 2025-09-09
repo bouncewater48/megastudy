@@ -40,24 +40,17 @@ public class Test01 {
 //    전화 번호 : 010-1234-5678
 //    https://www.google.com 로딩중...
 //    로딩 완료
-//010-000-0000 로 통화 중
-//010-1111-2222 로 ㅋㅋㅋㅋ 전송
+//    010-000-0000 로 통화 중
+//    010-1111-2222 로 ㅋㅋㅋㅋ 전송
     public static void main(String[] args) {
-
 
         IPhone iphone = new IPhone("iPhone", "010-1234-5678");
 
-        // 정보 출력
         System.out.println(iphone.infoString());
         System.out.println("전화 번호 : " + iphone.getPhoneNumber());
 
-        // 인터넷 브라우징
         iphone.internetBrowsing("https://www.google.com");
-
-        // 전화
         iphone.calling("010-000-0000");
-
-        // 메시지
         iphone.message("010-1111-2222", "ㅋㅋㅋㅋ");
 
     }
