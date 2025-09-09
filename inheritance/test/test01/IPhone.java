@@ -5,8 +5,14 @@ public class IPhone extends IPodTouch {
     private String phoneNumber;
 
     public IPhone(String model, String phoneNumber) {
+//        super();
         this.setModel(model);
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String infoString() {
+        return super.infoString() + "\n전화번호 : " + this.phoneNumber;
     }
 
     // 전화 기능

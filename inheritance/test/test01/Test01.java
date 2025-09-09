@@ -47,7 +47,8 @@ public class Test01 {
         IPhone iphone = new IPhone("iPhone", "010-1234-5678");
 
         System.out.println(iphone.infoString());
-        System.out.println("전화 번호 : " + iphone.getPhoneNumber());
+//        System.out.println("전화 번호 : " + iphone.getPhoneNumber());
+//        System.out.println(iphone.getPhoneNumber());
 
         iphone.internetBrowsing("https://www.google.com");
         iphone.calling("010-000-0000");
