@@ -1,27 +1,14 @@
 package polymorphism.test.test01;
 
-public class Cat {
+public class Cat extends Animal{
 
-    private String name;
-
-    // 이름
-    public Cat(String name) {
-        this.name = name;
-    }
-
-    // 먹이를 먹는 기능
-    public void eat() {
-        System.out.println("냠냠");
-    }
-
-    // 우는 기능
+    @Override
     public void cry() {
-        System.out.println("멍멍");
+        System.out.println("야옹");
     }
 
     // 그루밍 기능
     public void grooming() {
-        System.out.println("핥짝핥짝");
+        System.out.println("핥짝핥짝 그루밍");
     }
-
 }
