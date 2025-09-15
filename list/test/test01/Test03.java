@@ -151,27 +151,39 @@ public class Test03 {
 //
 //[우솝, 루피, 상디, 나미, 로빈, 프랑키, 루피1, 쵸파, 로빈1, 루피2]
 
-        List<String> nameList1 = new ArrayList<>();
-        nameList1.add("우솝");
-        nameList1.add("루피");
-        nameList1.add("상디");
-        nameList1.add("나미");
-        nameList1.add("로빈");
-        System.out.println(nameList1);
-
-        List<String> nameList2 = new ArrayList<>();
-        nameList2.add("프랑키");
-        nameList2.add("루피");
-        nameList2.add("쵸파");
-        nameList2.add("로빈");
-        nameList2.add("루피");
-        System.out.println(nameList2);
-
-        nameList1.addAll(nameList2);
-//        if(nameList1.contains(nameList2)) {
-//            System.out.println(nameList + "1");
+//        List<String> memberList = new ArrayList<>();
+//        memberList.add("우솝");
+//        memberList.add("루피");
+//        memberList.add("상디");
+//        memberList.add("나미");
+//        memberList.add("로빈");
+//        System.out.println(memberList);
+//
+//        List<String> newMemberList = new ArrayList<>();
+//        newMemberList.add("프랑키");
+//        newMemberList.add("루피");
+//        newMemberList.add("쵸파");
+//        newMemberList.add("로빈");
+//        newMemberList.add("루피");
+//        System.out.println(newMemberList);
+//
+//        for(int i = 0; i < newMemberList.size; i++) {
+//            String newMember = newMemberList.get(i);
+//
+//            int count = 1;
+//            while(memberList.contains(newMember)) {
+//
+//                newMember = newMemberList.get(i) + count;
+//                count++;
+//            }
+//
+//            memberList.add(newMember);
 //        }
-        System.out.println(nameList1);
+//
+//        System.out.println(memberList);
+//
+
+//        System.out.println(nameList1);
 
     }
 }
