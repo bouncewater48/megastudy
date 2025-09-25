@@ -1,0 +1,32 @@
+#wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+header {
+    height: 100px;
+}
+
+.main-menu {
+    height: 50px;
+}
+
+.contents > .main-contents {
+    height: 500px;
+}
+
+/* .main-contents > .contents1 {
+    height: 50%;
+}
+
+.main-contents > .contents2 {
+    height: 50%;
+} */
+
+.contents > .sub-contents {
+    height: 500px;
+}
+
+footer {
+    height: 80px;
+}

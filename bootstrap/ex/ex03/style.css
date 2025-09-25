@@ -1,0 +1,17 @@
+#wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+header {
+    height: 100px;
+    /* padding: 1px; */
+}
+
+.main-menu {
+    height: 40px;    
+}
+
+footer {
+    height: 80px;
+}

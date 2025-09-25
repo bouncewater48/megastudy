@@ -1,0 +1,60 @@
+#wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+header {
+    height: 100px;
+}
+
+header > .logo {
+    height: 100px;
+    font-size: 40px;
+}
+
+header > .main-menu {
+    height: 100px;
+    padding: 40px 0;
+    text-align: center;
+    background-color: blue;
+}
+
+.contents {
+    height: 500px;
+}
+
+.contents > .banner {
+    height: 500px;
+    background-color: deeppink;
+}
+
+.contents > .main-contents {
+    height: 500px;
+}
+
+.main-contents > .title {
+    background-color: darkgoldenrod;
+}
+
+.main-contents > .search {
+    background-color: crimson;
+}
+
+footer {
+    height: 80px;
+}
+
+footer > .logo {
+    height: 80px;
+    background-color: darkturquoise;
+}
+
+footer > .copyright {
+    height: 80px;
+    background-color: darkorange;
+}
+
+footer > .contact {
+    height: 80px;
+    background-color: lightseagreen;
+}

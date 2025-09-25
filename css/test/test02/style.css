@@ -1,0 +1,38 @@
+
+.month {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.holiday {
+    color: red;
+}
+
+.calender > tbody > tr > td:hover {
+    background-color: aqua;
+}
+
+.calender {
+    /* width: 1200px;
+    height: 530px; 
+    td에 있는 너비&높이와 충돌이 발생, 둘 중 하나만 사용할 것!*/
+    border: 1px solid black;
+    border-collapse: collapse;    
+}
+
+.today {
+    font-weight: bold;
+}
+
+.calender > tbody > tr > .today:hover{
+    background-color:#beff09;
+}
+
+td {
+    text-align: left;
+    vertical-align: text-top;
+    width: 150px;
+    height: 100px;
+    padding: 5px;
+}
+

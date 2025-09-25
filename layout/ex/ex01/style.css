@@ -1,0 +1,43 @@
+.box-size {
+    width: 200px;
+    height: 150px;
+}
+
+
+.box1 {
+    width: 200px;
+    height: 150px;
+    background-color: red;
+}
+
+.box2 {
+    width: 200px;
+    height: 150px;
+    background-color: blue;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.box-margin {
+    /* margin: 20px; */
+    margin-bottom: 20px;
+}
+
+.box-padding {
+    padding: 20px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    /* padding-top: 20px; */
+}
+
+/* display-flex가 존재하지 않으면 작동하지 않음, display-flex 필수! */
+.box-align {
+    /*  flex-start : 왼쪽 정렬
+        center : 가운데 정렬
+        flex-end : 오른쪽 정렬 */
+    /* justify-content: center; */
+    /* space-between space-around space-evenly */
+    justify-content: space-evenly;
+}

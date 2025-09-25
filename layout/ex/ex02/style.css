@@ -1,0 +1,51 @@
+#wrap {
+    width: 1200px;
+    /* height: 800px; */
+    background-color: aqua;
+    margin: 0 auto;
+}
+
+header {
+    width: 1200px;
+    height: 100px;
+    background-color: crimson;
+}
+
+.main-menu {
+    height: 50px;
+    background-color: lightgreen;
+}
+
+.contents {
+    height: 500px;
+    background-color: blue;
+}
+
+.contents > .main-contents {
+    width: 900px;
+}
+
+.main-contents > .contents1 {
+    height: 250px;
+    background-color: darkgrey;
+}
+
+.main-contents > .contents2 {
+    height: 250px;
+    background-color: beige;
+}
+
+.contents > .sub-contents {
+    width: 300px;
+    height: 500px;
+    background-color: indigo;
+}
+
+footer {
+    height: 100px;
+    background-color: khaki;
+}
+
+.display-flex {
+    display: flex;
+}

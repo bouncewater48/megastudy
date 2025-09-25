@@ -1,0 +1,28 @@
+#wrap {
+    width: 1200px;
+}
+
+.box-align {
+    justify-content:flex-start;
+}
+
+.main-menu {
+    height: 150px;
+    background-color: aqua;
+}
+
+.main-menu > .sub-menu {
+    width: 200px;
+    height: 150px;
+    background-color:maroon;
+}
+
+.contents {
+    height: 700px;
+    background-color: blue;
+}
+
+footer {
+    height: 150px;
+    background-color: orange;
+}

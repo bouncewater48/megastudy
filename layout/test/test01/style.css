@@ -1,0 +1,39 @@
+.box-size {
+    width: 150px;
+    height: 150px;
+}
+
+.box-margin {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: green;
+}
+
+.box3 {
+    background-color: yellow;
+}
+
+.box4 {
+    background-color: blue;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.box-align {
+    justify-content: center;
+}
+
+.box-center {
+    display: flex;
+    justify-content: center;
+}

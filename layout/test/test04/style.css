@@ -1,0 +1,50 @@
+#wrap {
+    width: 1200px;
+    height: 1000px;
+    background-color: yellow;
+    font-size: 20px;
+
+}
+
+header {
+    height: 150px;
+    display: flex;
+    font-weight: bold;
+}
+
+header > .logo {
+    width: 300px;
+    background-color: red;
+}
+
+header > nav {
+    width: 900px;
+    background-color: blueviolet;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+section {
+    height: 730px;
+}
+
+section > article {
+    flex: 1;
+    padding: 20px;
+}
+
+section > .article1 {
+    background-color: purple;
+}
+
+section > .article2 {
+    background-color: burlywood;
+}
+
+footer {
+    height: 120px;
+    background-color: aquamarine;
+}
