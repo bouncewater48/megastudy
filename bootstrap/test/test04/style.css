@@ -14,31 +14,34 @@ header > .logo {
 
 header > .main-menu {
     height: 100px;
-    padding: 40px 0;
-    text-align: center;
-    background-color: blue;
+    /* padding: 40px 0; */
+    font-size: 20px;
+    /* text-align: center; */
+    /* background-color: blue; */
 }
 
 .contents {
-    height: 500px;
+    height: 600px;
 }
 
 .contents > .banner {
-    height: 500px;
-    background-color: deeppink;
+    height: 600px;
+    /* background-color: deeppink; */
+    overflow: hidden;
 }
 
 .contents > .main-contents {
-    height: 500px;
+    height: 600px;
 }
 
-.main-contents > .title {
+/* .main-contents > .title {
+    padding: 40px 0; 
     background-color: darkgoldenrod;
-}
+} */
 
-.main-contents > .search {
+/* .main-contents > .search {
     background-color: crimson;
-}
+} */
 
 footer {
     height: 80px;
