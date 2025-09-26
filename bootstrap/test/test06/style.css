@@ -1,0 +1,83 @@
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+header {
+    height: 100px;
+}
+
+.site-name {
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.search {
+    width: 1000px;
+    height: 50px;
+}
+
+.search > .btn {
+    background-color: aqua;
+}
+
+.login {
+    width: 100px;
+    height: 50px;
+}
+
+section {
+    height: auto;
+}
+
+section > .left-menu {
+    width: 200px;
+    height: auto;
+    line-height: 2.5;
+}
+
+section > .left-menu > .nav {
+    font-size: 13px;
+}
+
+section > .left-menu > .nav > .nav-item {
+    width: 100%;
+    font-size: 13px;
+}
+
+section > .main-contents {
+    width: 1050px;
+    flex-wrap: wrap;
+    /* display: grid;   그리드 레이아웃 그리드:줄바꿈과 정렬을 자동으로 계산 */
+    /* 같은 항목(display, ...)끼리는 중첩 적용 x */
+    /* 어지간하면 flex로 처리하면 될것 */
+    grid-template-columns: repeat(3, 1fr); /* 공간을 3등분(fr)하기 */
+    /* gap은 넣으나 안넣으나 3등분으로 처리되니 굳이 필수는 아님! */
+}
+
+section > .main-contents > .vedio {
+    max-width: 30%;
+    flex: 1 1 30%;
+    margin: 10px;
+}
+
+section > .main-contents > .vedio > .vedio-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+section > .main-contents > .vedio > .channel {
+    font-size: 10px;
+}
+
+section > .main-contents > .vedio > .views {
+    font-size: 10px;
+}
+
+footer {
+    height: 200;
+    font-size: 11px;
+}
+

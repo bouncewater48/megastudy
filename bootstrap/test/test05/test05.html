@@ -11,36 +11,98 @@
 </head>
 
 <body>
-    <header>
-        <div class="align-items-start">
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="checkbox">검색</button>
-                    </form>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <h3>상맨</h3>
-                        <div>상 남자의 패션몰</div>
+    <div id="wrap">
+        <header class="d-flex">
+            <div class="search d-flex align-items-end">
+                <!-- <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search">
+                            <button class="btn btn-outline-success">검색</button>
+                        </form>
                     </div>
-                    <div>
-                        <div>로그인</div>
+                </nav> -->
+                <div class="input-group mb-2 col-10 p-0">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button">검색</button>
                     </div>
                 </div>
-            </nav>
-        </div>
-
-
-
-
-    </header>
-
-    <section>
-        <article></article>
-        <article></article>
-    </section>
-
-    <footer></footer>
+            </div>
+            <div class="logo d-flex justify-content-center">
+                <div>
+                    <div class="display-4">상맨</div>
+                    <div>상 남자의 쇼핑몰</div>
+                </div>
+            </div>
+            <div class="account-menu d-flex justify-content-end align-items-end">
+                <ul class="nav small">
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">로그인</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">회원가입</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">고객센터</a></li>
+                    <li class="nav-item"><a class="nav-link text-secondary" href="#">장바구니</a></li>
+                </ul>
+            </div>
+        </header>
+        <nav class="main-menu">
+            <ul class="nav nav-fill">
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Outer</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Top</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Shirt</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Pants</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Accessory</a></li>
+            </ul>
+        </nav>
+        <section class="contents">
+            <div>
+                <img alt="이벤트 배너"
+                    src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test05_main_banner.jpg">
+            </div>
+            <div class="best-seller my-4">
+                <h3>Best Seller</h3>
+                <div class="goods-list d-flex justify-content-between">
+                    <div class="goods">
+                        <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test05_best1.jpg">
+                        <div class="font-weight-bold">리얼 가죽 무스탕</div>
+                        <div><del class="text-secondary">87,000원</del></div>
+                        <div>55,000원</div>
+                    </div>
+                    <div class="goods">
+                        <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test05_best2.jpg">
+                        <div class="font-weight-bold">리얼 가죽 무스탕</div>
+                        <div><del class="text-secondary">87,000원</del></div>
+                        <div>55,000원</div>
+                    </div>
+                    <div class="goods">
+                        <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test05_best3.jpg">
+                        <div class="font-weight-bold">리얼 가죽 무스탕</div>
+                        <div><del class="text-secondary">87,000원</del></div>
+                        <div>55,000원</div>
+                    </div>
+                    <div class="goods">
+                        <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test05_best4.jpg">
+                        <div class="font-weight-bold">리얼 가죽 무스탕</div>
+                        <div><del class="text-secondary">87,000원</del></div>
+                        <div>55,000원</div>
+                    </div>
+                    <div class="goods">
+                        <img src="http://marondal.com/material/images/dulumary/web/front/bootstrap/test05_best5.jpg">
+                        <div class="font-weight-bold">리얼 가죽 무스탕</div>
+                        <div><del class="text-secondary">87,000원</del></div>
+                        <div>55,000원</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="text-center small">
+                회사 : Sangman 대표 : 김상남 <br>
+                주소 : 서울시 종로구 아무개로 32번길 93 패션타운 806호<br>
+                사업자 번호 : 1010101010-1010101000<br>
+                Copyright 2021. sangman All Rights Reserved.<br>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>

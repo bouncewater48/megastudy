@@ -1,11 +1,38 @@
+#wrap {
+    width: 1200px;
+    height: 800px;
+    margin:0 auto;
+}
+
 header {
-    background-color: aqua;
+    height: 100px;
 }
 
-header > .container-fluid {
-    background-color: yellow;
+header > .search {
+    width: 400px;
+    height: 100px;
 }
 
-section {
-    background-color: chartreuse;
+header > .logo {
+    width: 400px;
+    height: 100px;
 }
+
+header > .account-menu {
+    width: 400px;
+    height: 100px;
+}
+
+.main-menu {
+    height: 40px;
+    background-color:#cccccc;
+}
+
+.contents {
+    height:auto;
+}
+
+footer {
+    height: 100px;
+}
+
