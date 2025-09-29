@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>변수와 if</title>
+</head>
+
+<body>
+    <script>
+        // 1. 변수 alert 출력
+        //     변수를 사용해서 연산하고 alert 창에 아래와 같이 출력하세요.
+        //     출력 예시
+
+        //     5 X 8 = 40
+        
+        // let number5 = 5;
+        // let number8 = 8;
+
+        // alert("5 X 8 = " + (number5 * number8));
+
+        //             2. 변수 console 출력
+        // 주어진 두 개의 변수를 아래와 같은 형태로 console에 출력하세요.
+        // 변수는 값을 변경하지 말고 그대로 사용하세요.
+        // let number1 = 12;
+        // let number2 = 34;
+        // 출력 예시
+
+        // 1234
+
+        let number1 = 12;
+        let number2 = 34;
+        console.log(number1 + "" + number2);
+
+        // 3. 변수 비교
+        // 아래 주어진 두 변수를 등호(=) 비교 연산자를 통해서 조건문을 만들고 아래와 같이 출력하도록 구현하세요.
+        // let number3 = 10;
+        // let number4 = "10";
+        // 출력 예시
+
+        // 두 변수는 같지 않다.
+
+        let number3 = 10;
+        let number4 = "10";
+        if (number3 !== number4) {
+            console.log("두 변수는 같지 않다");
+        }
+
+        // 4. 변수 비교
+        // 주어진 두 변수를 비교해서 true가 되도록 조건을 만들고 console로 아래와 같이 출력하세요.
+        // let score;
+        // let number = null;
+        // 출력 예시
+
+        // true
+
+        let score;
+        let number = null;
+
+        if (score == number) {
+            console.log("true");
+        }
+
+        // 5. 경고 창
+        // 주어진 변수를 ID 값이라고 가정하고 alert 창을 띄우세요.
+        // 변수 예시 (정상적인 경우)
+
+        // let userId = "hagulu";
+        // 변수 예시 (비정상적인 경우)
+
+        // let userId;
+        // let userId = "";
+        // let userId = null;
+        // 출력 예시 (정상적으로 값이 있을 경우)
+
+        // 안녕하세요 hagulu 님
+        // 출력 예시 (비정상적인 경우)
+
+        // 비정상적인 접근입니다. 
+
+        // let userId = "hagulu";        
+        // let userId = null;      
+        // let userId;
+        // let userId = "";          
+        // if (userId) {
+        //     alert("안녕하세요 " + userId + " 님");
+        // } else {
+        //     alert("비정상적인 접근입니다.");
+        // }
+
+        // 6. 지역 변수
+        // 주어진 코드가 아래처럼 출력되도록 수정하세요.
+        // var word1 = "hello";
+
+        // if(word1 == "hello") {
+        //     let word2  = "world";
+        // }
+
+        // console.log(word1 + word2);
+        // 출력 결과
+
+        // hello world
+
+        var word1 = "hello";
+        let word2 = "world";
+
+        if(word1 == "hello") {
+            word2  = "world";
+        }
+
+        console.log(word1 + " " + word2);        
+    </script>
+</body>
+
+</html>

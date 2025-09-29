@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>반복문과 자료형</title>
+</head>
+
+    <body>
+        <script>
+        // 1. 반복 alert 출력
+        // 반복문을 활용해서 alert 창이 다섯 번 뜨게 만드세요.
+
+        // for(let i = 1; i <= 5; i++) {
+        //     alert(i);
+        // }
+
+        // 2. 합 구하기
+        // 주어진 배열의 값을 모두 더하고 console에 출력하세요.
+        // let array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
+        // 출력 예시
+
+        // 118
+
+        let array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
+        let sum = 0;
+
+        for(let i = 0; i < array.length; i++) {
+
+            sum += array[i];
+        }
+
+        console.log(sum);
+
+        // 3. 값 출력하기
+        // 주어진 dictionary를 이용해서 화면에 아래와 같이 console에 출력하세요.
+        // let goods = {"name": "육개장", "price": 1300, "expirationDate":"2021/07/04"};
+        // 출력 예시
+
+        // 제품 : 육개장 가격 : 1300원 유통기한 : 2021/07/04
+
+        let goods = {"name": "육개장", "price": 1300, "expirationDate":"2021/07/04"};
+        console.log("제품 : " + goods.name + " 가격 : " + goods.price + "원 유통기한 : " + goods.expirationDate);
+        
+        // 4. 맛집 리스트
+        // 맛집 리스트가 아래와 같이 저장되어 있다.
+        // let restaurantList = [
+        //         {"name":"토속촌", "menu":"한식", "location":"서울 종로구"}, 
+        //         {"name":"아이러브떡볶이", "menu":"분식", "location":"서울 중구"}, 
+        //         {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
+        //         {"name":"연돈", "menu":"일식", "location":"제주도"}, 
+        //         {"name":"쿠이", "menu":"양식", "location":"부산"},
+        //         {"name":"하남돼지집", "menu":"고기", "location":"성남시 분당구"}
+        // ];
+        // 위 자료에서 고기 집을 제외한 모든 맛집을 아래와 같이 화면에 출력하세요.
+        // 출력 예시
+
+        // 상호명 : 토속촌 위치 : 서울 종로구
+        // 상호명 : 아이러브떡볶이 위치 : 서울 중구
+        // 상호명 : 연돈 위치 : 제주도
+        // 상호명 : 쿠이 위치 : 부산 
+
+        let restaurantList = [
+                {"name":"토속촌", "menu":"한식", "location":"서울 종로구"}, 
+                {"name":"아이러브떡볶이", "menu":"분식", "location":"서울 중구"}, 
+                {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
+                {"name":"연돈", "menu":"일식", "location":"제주도"}, 
+                {"name":"쿠이", "menu":"양식", "location":"부산"},
+                {"name":"하남돼지집", "menu":"고기", "location":"성남시 분당구"}
+        ];
+        
+        for(let restaurant of restaurantList) {
+            if(restaurant.menu !== "고기") {
+                console.log("상호명 : " + restaurant.name + " 위치 : " + restaurant.location);
+            }
+        }
+
+        </script>
+    </body>
+
+</html>

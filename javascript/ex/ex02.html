@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+    </head>
+
+    <body>
+
+        <script>
+            // for 반복문
+            for(let i = 1; i <= 5; i++) {
+                console.log(i);
+            }
+
+            // 배열, 리스트
+            let array = [10, 20, 30, 40, 50];
+
+            console.log(array);
+
+            console.log(array[2]);
+
+            for(let i = 0; i < array.length; i++) {
+                console.log(array[i]);
+            }
+
+            // for of
+            for(let number of array) {
+                console.log(number);
+            }
+
+            // key - value (Java - Map)
+
+            let scoreInfo = {"국어":90, "수학":100, "영어":95};
+
+            console.log(scoreInfo);
+            console.log(scoreInfo["수학"]);
+
+            scoreInfo["국어"] = 95;
+            console.log(scoreInfo);
+
+            let person = {};
+            person["name"] = "강승훈";
+            person["gender"] = "남성";
+
+            console.log(person);
+
+            person.age = 28;
+            console.log(person.age);
+
+            console.log(person.name);
+
+            // for in
+            for(let key in person) {
+                console.log(key);
+                console.log(person[key]);
+            }
+
+            
+        </script>
+    </body>
+</html>

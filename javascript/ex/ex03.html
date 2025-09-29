@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript 문자열</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            let text = "I must do what I want to do";
+
+            // 문자열 길이
+            console.log(text.length);
+
+            // 특정 위치의 문자 얻기
+            console.log(text.charAt(7));
+
+            // 특정 문자열의 위치 확인
+            console.log(text.indexOf("what"));
+
+            // 특정 문자열이 존재하는지 확인
+            console.log(text.includes("must"));
+
+            // 특정 문자열을 다른 문자열로 바꾼다 (치환)
+            console.log(text.replace("I", "You"));
+
+            // 문자열 자르기
+            console.log(text.substring(2, 6));
+
+            // 문자열 쪼개기
+            console.log(text.split(" "));
+
+            // 문자열 앞뒤 공백 제거
+            let userId = "          dulumary             ";
+
+            console.log(userId);
+            console.log(userId.trim());
+
+        </script>
+    </body>
+</html>
