@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h2>jQuery</h2>
+        <div id="contents">jQuery 사용하기</div>
+
+        <h3>1. 클릭 이벤트</h3>
+        <label>텍스트 </label> <input type="text" id="textInput"> <!-- input 태그에는 value가 포함되어 있음, 다만 일반적으론 생략되어 있는 경우가 많음 -->
+        <button type="button" id="confirmBtn">확인</button>
+
+        <div id="textDiv"></div>
+        <input type="text" id="copyInput">
+
+        <h3>2. 스타일 다루기</h3>
+        <div class="box2" id="box"></div>
+        <button type="button" id="divBtn">숨기기/보이기</button>
+        <button type="button" id="changeBtn">바꾸기</button>
+
+        <h3>3. 속성 다루기</h3>
+        <a id="link" href="http://google.com" target="_blank">구글로 이동</a>
+        <button type="button" id="linkBtn">링크 변경</button>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+        <script>    
+
+            $("#linkBtn").on("click", function() {
+                $("#link").attr("href", "https://naver.com");
+            })
+
+            $("#changeBtn").on("click", function() {
+                // $("#box").css("background-color", "brown");
+
+                // box 클래스인 경우 box2
+                if($("#box").hasClass("box")) {
+                    $("#box").removeClass("box");
+                    $("#box").addClass("box2");
+                } else {
+
+                    // box2 클래스인 경우 box
+                    $("#box").removeClass("box2");
+                    $("#box").addClass("box");
+
+                }
+            });
+
+            $("#divBtn").on("click", function() {
+
+                // #box 가 보여진 상태면 숨기기
+                if($("#box").is(":visible")) {
+                    $("#box").hide();
+                } else {
+
+                    // #box 가 숨겨진 상태면 보이기
+                    $("#box").show();
+                }
+            });
+
+
+
+            function clickEvent() {
+
+
+            }
+
+            // 이벤트 등록
+            // 확인 버튼을 클릭했을떄 수행할 기능을 등록
+            // 1. 이벤트를 등록할 대상 태그를 객체로 얻어온다
+            // 2. 해당 태그 객체에 이벤트 등록
+            // 익명 함수 : 이름이 없는 함수, 
+
+            $("#confirmBtn").on("click", function() {
+                // input 태그에 입력된 내용을 alert을 통해 띄운다
+                // 1. input 태그를 객체로 얻어온다
+                // 2. input 태그의 입력된 값 얻어오기 (=value 속성 값 얻어오기)
+                // 확인 버튼을 클릭하면 alert 창이 나옴
+
+                let text = $("#textInput").val();
+                alert(text);
+
+                $("#textDiv").text(text);
+                $("#copyInput").val(text);
+
+            });
+
+            // id가 contents 인 태그 객체로 얻어오기
+            $("#contents").text("jQuery 문법을 배웁니다!");
+
+        </script>
+    </body>
+</html>

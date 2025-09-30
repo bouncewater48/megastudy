@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>click 이벤트 - 제이쿼리</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <h3>1. 비밀번호 일치</h3>
+        <label id="passWord">비밀번호 : </label> <input type="text" id="pwInput"> 
+        <label class="verifyPw">비밀번호 확인 : </label> <input type="text">
+        <button type="button" id="confirmBtn">확인</button>
+
+        <h3>2. 금칙어</h3>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+        <script>
+
+            $("#pwInput").val("비밀번호를 입력해주세요")
+            $("#pwInput").on("click", function() {
+                if ($("#pwInput").val().is(":visible")) {
+                    $("#pwInput").val().hide();
+                }
+            })
+            
+
+            $("#confirmBtn").on("click", function() {
+                
+                $("#textInput").hide();
+                // text = 비밀번호
+                // let text = $("#textInput").val();
+                // let textInput = $("#textInput")
+
+                if($("#passWord").hasClass("#verifyPw")) {
+                    alert("확인 완료");
+                } else {
+                    alert("비밀번호가 일치하지 않습니다.")
+                }
+            })
+
+
+            // 5번 문제는 사진 3개를 링크로 이어놓고, 버튼을 눌렀을때 다른 이미지로 교체되게끔 구현
+        </script>
+    </body>
+</html>
