@@ -1,0 +1,23 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.boxBlue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.boxRed {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.boxGreen {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}

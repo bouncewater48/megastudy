@@ -5,42 +5,143 @@
         <meta charset="utf-8">
         <title>click 이벤트 - 제이쿼리</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <h3>1. 비밀번호 일치</h3>
-        <label id="passWord">비밀번호 : </label> <input type="text" id="pwInput"> 
-        <label class="verifyPw">비밀번호 확인 : </label> <input type="text">
-        <button type="button" id="confirmBtn">확인</button>
 
+        <label id="passWord">비밀번호 : </label> 
+        <input type="password" id="passwordInput"> <br>
+        <label>비밀번호 확인 : </label> 
+        <input type="password" id="passwordConfirmInput">
+        <button type="button" id="confirmBtn">확인</button>
+        
+
+        <hr>
         <h3>2. 금칙어</h3>
+
+        <input type="text" id="searchInput">
+        <button type="button" id="searchBtn">검색</button>
+
+        <hr>
+        <h3>3. 더보기</h3>
+
+        <button type="button" id="moreBtn">펼치기</button>
+        <div id="moreText">추가 항목 입니다. 블라 블라</div>
+
+        <hr>
+        <h3>4. 사각형 바꾸기</h3>
+
+        <div class="big-box" id="box"></div>
+        <button type="button" id="changeBtn">교체</button>
+
+        <hr>
+        <h3>5. 이미지 교체</h3>
+
+        <button type="button" id="prevBtn">이전</button>
+        <img width="300" src="https://cdn.pixabay.com/photo/2025/02/21/10/33/cat-9421720_640.jpg" id="image">
+        <button type="button" id="nextBtn">다음</button>
 
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
         <script>
 
-            $("#pwInput").val("비밀번호를 입력해주세요")
-            $("#pwInput").on("click", function() {
-                if ($("#pwInput").val().is(":visible")) {
-                    $("#pwInput").val().hide();
+            // 5번
+            var imageList = [
+                "https://cdn.pixabay.com/photo/2025/02/21/10/33/cat-9421720_640.jpg",
+                "https://cdn.pixabay.com/photo/2025/07/26/21/13/daisies-9737623_1280.jpg",
+                "https://cdn.pixabay.com/photo/2022/10/18/06/57/cat-7529439_640.jpg"
+            ];
+
+            var currentIndex = 0;
+
+            $("#prevBtn").on("click", function() {
+                currentIndex--;
+
+                if(currentIndex < 0) {
+                    currentIndex = imageList.length - 1;
                 }
-            })
-            
 
-            $("#confirmBtn").on("click", function() {
-                
-                $("#textInput").hide();
-                // text = 비밀번호
-                // let text = $("#textInput").val();
-                // let textInput = $("#textInput")
+                $("image").attr("src", imageList[currentIndex]);
+            });
 
-                if($("#passWord").hasClass("#verifyPw")) {
-                    alert("확인 완료");
+            $("#nextBtn").on("click", function() {
+                currentIndex++;
+
+                if(currentIndex == imageList.length) {
+                    currentIndex = 0;
+                }
+
+                $("#image").attr("src", imageList[currentIndex]);
+            });
+
+            // 4번
+            $("#changeBtn").on("click", function() {
+
+                if($("#box").hasClass("box")) {
+
+                $("#box").removeClass("box");
+                $("#box").addClass("big-box");
+
                 } else {
-                    alert("비밀번호가 일치하지 않습니다.")
+                    $("#box").removeClass("big-box");
+                    $("#box").addClass("box");
                 }
-            })
+            });
+
+            // 3번
+            $("#moreText").hide();
+
+            $("#moreBtn").on("click", function(){
+
+                // 추가 내용이 보여지는 상태면 숨긴다
+                if($("#moreText").is(":visible")) {
+
+                    $("#moreText").hide();
+                    $(this).text("펼치기");
+
+                } else {
+                    // 추가 내용이 숨겨진 상태면 보여지게 한다
+                    $("")
+
+                    $("#moreText").show();
+                    // this : 이벤트가 발생한 그 태그 객체                
+                    $(this).text("닫기");
+
+                }
+            });
+
+            // 2번
+            $("#searchBtn").on("click", function() {
+                let bannedWords = ["십장생", "시베리아", "조카신발", "쌍쌍바", "십원짜리"];
+
+                let keyword = $("#searchInput").val();
+
+                for(let word of bannedWords) {
+                if(keyword.includes(word)) {
+                    alert("금칙어가 포함되어 있습니다. 검색할 수 없습니다.");
+                    break;
+                    }
+                }
+            });
+
+            // 1번
+            $("#confirmBtn").on("click", function() {
+
+                let password = $("#passwordInput").val();
+                let passwordConfirm = $("#passwordConfirmInput").val();
+
+                if(password == "") {
+                    alert("비밀번호를 입력해주세요");
+                } else if(password != passwordConfirm) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                } else {
+                    alert("확인 완료");
+                }
+
+            });
 
 
             // 5번 문제는 사진 3개를 링크로 이어놓고, 버튼을 눌렀을때 다른 이미지로 교체되게끔 구현

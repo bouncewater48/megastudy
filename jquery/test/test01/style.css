@@ -1,0 +1,15 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
+
+.big-box {
+    width: 500px;
+    height: 500px;
+    background-color: cornflowerblue;
+}
+
+.hide {
+    display: none;
+}

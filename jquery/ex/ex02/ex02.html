@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>여러가지 이벤트</title>
+    </head>
+
+    <body>
+        <h3>1. 좋아 하는 동물을 하나 고르세요</h3>
+        <label><input type="radio" name="animal" value="dog" checked>강아지</label>
+        <label><input type="radio" name="animal" value="cat" id="catRadio">고양이</label>
+        <label><input type="radio" name="animal" value="tiger">호랑이</label>
+        <br>
+        <button type="button" id="catCheckBtn">고양이 선택</button>
+
+        <button type="button" id="cancleBtn">선택해제</button>
+
+        <h3>2. 사이트 이동</h3>
+        <select id="siteSelect">
+            <!-- 텍스트 이름보다 밸류가 우선적으로 노출 -->
+            <option value="naver">네이버</option>
+            <option value="google">구글</option>
+            <option value="daum">다음</option>
+        </select>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>         
+        <script>
+
+            // 2번 사이트 이동
+            $("#siteSelect").on("change", function() {
+                let site = $(this).val();
+                
+                if(site == "naver") {
+                    location.href = "https://naver.com";
+                } else if(site == "google") {
+                    location.href = "https://google.com";
+                } else if(site == "daum") {
+                    location.href = "https://daum.net";
+                }
+            });
+
+            // 1번 라디오버튼
+            // 어떤것이 선택되었든간에 해제하는 버튼
+            $("#cancleBtn").on("click", function() {
+                $("input[name=animal]").prop("checked", false);
+            });
+
+            $("#catCheckBtn").on("click", function() {
+                // $("#catRadio").attr("checked", true);
+                // checked, selected
+
+                // prop : radio를 사용할때 다른 버튼에 가있으면 항상 false로 인식함
+                $("#catRadio").prop("checked", true);
+            });
+
+            $("input[name=animal]").on("change", function() {
+                
+                let animal = $(this).val();
+                alert(animal);
+
+            });
+
+        </script>
+
+    </body>
+</html>

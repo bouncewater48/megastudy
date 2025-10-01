@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>change 이벤트</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>1. 색 바꾸기</h3>
+    <div class="box" id="box"></div>
+
+    <select id="colorSelect">
+        <option>-- 색 선택 --</option>
+        <option value="blue">파랑색</option>
+        <option value="red">빨강색</option>
+        <option value="green">녹색</option>
+    </select>
+
+    <hr>
+    <h3>2. 입력 바꾸기</h3>
+    <label><input type="radio" name="job" id="student" checked>학생</label>
+    <label><input type="radio" name="job" id="salary">직장인</label> <br>
+    학교명<input type="text" id="searchInput">
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>         
+
+    <script>
+
+        // 2번
+        $("#searchInput").on("click", function () {
+            $("input[name=name]").prop("checked", false);
+        });
+
+        $("radio").on("click", function () {
+
+
+        });
+        // 1번
+        $("#colorSelect").on("click", function () {
+            let color = $(this).val();
+
+            // $("#box").removeClass("box boxBlue boxRed boxGreen");
+
+            if (color == "blue") {
+                $("#box").css("background-color", "blue");
+            } else if (color == "red") {
+                $("#box").css("background-color", "red");
+            } else if (color == "green") {
+                $("#box").css("background-color", "green");
+            } else {
+                $("#box").addClass("box");
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
