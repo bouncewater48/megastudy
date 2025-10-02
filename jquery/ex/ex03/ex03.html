@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>날짜 선택</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    <h3>날짜 선택</h3>
+    <label>날짜 : </label><input type="text" id="dateInput">
+
+    <h3>달력 옵션</h3>
+    <label>날짜 : </label><input type="text" id="dateOptionInput">
+
+    <h3>달력 이벤트</h3>
+    <label>날짜 : </label><input type="text" id="dateEventInput">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+
+        $("#dateEventInput").datepicker({
+            dateFormat:"yy년 m월 d일" ,
+            beforeShow:function() {
+                alert("곧 달력 뜸!");
+            },
+            // onSelect : 날짜 선택 이후에 뜸 / S 대문자 확인할것!!!
+            onSelect:function(dateString) {
+                alert("날짜 선택! " + dateString)
+            }
+        });
+        
+        $("#dateInput").datepicker();
+
+        $("#dateOptionInput").datepicker({
+            dateFormat:"yy-mm-dd" ,
+            changeYear:true ,
+            changeMonth:true
+        });
+    </script>
+
+</body>
+
+</html>

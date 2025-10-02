@@ -23,24 +23,108 @@
 
     <hr>
     <h3>2. 입력 바꾸기</h3>
-    <label><input type="radio" name="job" id="student" checked>학생</label>
-    <label><input type="radio" name="job" id="salary">직장인</label> <br>
-    학교명<input type="text" id="searchInput">
+    <label>학생<input type="radio" name="job" value="student" checked></label>
+    <label>직장인<input type="radio" name="job" value="worker"></label> <br>
+    <div id="schoolInput">
+        <label>학교명</label> <input type="text">
+    </div>
+    <div class="hide" id="companyInput">
+        <label>회사명</label> <input type="text">
+    </div>
+
+    <hr>
+    <h3>3. 전체 선택</h3>
+    <label>전체 선택 <input type="checkbox" id="allCheck"></label> <br>
+    <label>개인정보 활용 동의<input type="checkbox" name="accept"></label>
+    <label>서비스 이용 동의<input type="checkbox" name="accept"></label>
+    <label>마케팅 활용 동의<input type="checkbox" name="accept"></label>
+
+    <hr>
+    <h3>4. 길이 제한</h3>
+    <input type="text" id="textInput">
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>         
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
+        // 4번
+
+        $("#textInput").on("input", function () {
+            // keyup : 입력시 조건과 다른 변화가 생길때 발생하는 이벤트, but 키다운 형식으로 입력이 들어오면 이벤트가 발생하지 않는다
+            // input : 입력에 변화가 생길때마다 발생하는 이벤트, keyup과 다르게 아무리 빠르게 입력이 발생해도 이벤트가 발생한다
+
+            let text = $(this).val();
+
+            // 5자 초과시 자동으로 잘라내는 기능
+            if (text.length > 5) {
+                alert("5자를 초과 했습니다");
+                let newText = text.substring(0, 5);
+                $(this).val(newText);
+            }
+
+        });
+
+        // 3번
+
+        $("input[name=accept]").on("change", function () {
+            // :checked - 선택된 객체들만 얻어오는것
+
+            $("#allCheck").prop("checked", $("input[name=accept]:checked").length == $("input[name=accept]").length);
+
+            // 선택된 객체의 길이가 3인 경우(최대인 경우)
+            // if($("input[name=accept]:checked").length == 3) {
+            // }
+        });
+
+
+        // 선택된 객체의 길이가 최대인 경우(length == 총 길이)
+        $("#allCheck").on("change", function () {
+
+            $("input[name=accept]").prop("checked", $(this).is(":checked"));
+
+                // if($(this)is(":checked"){
+        //             $("#allCheck").prop("checked", true);
+        //             //선택된 객체의 길이가 3이 아닌 경우(최대가 아닌 경우)
+        //         } else {
+        //             $("#allCheck").prop("checked", false);
+                // }
+        });
+
+        // 전체 선택을 누를떄 체크 상태가 아니면 전체 체크, 아니라면 전체 체크 해제
+
+        // 2번째 방법, 간단하게 사용
+        // $("input[name=accept]").prop("checked", $(this).is(":checked"));
+
+
+        // 1번쨰 방법
+        // if($(this).is(":checked")) {
+        //     $("input[name=accept]").prop("checked", true);
+        // } else {
+        //     $("input[name=accept]").prop("checked", false);
+        // }
+
+        // 전체 선택을 누를 시 전체 체크
+        // $("input[name=accept]").prop("checked", true);
+        // });
+
         // 2번
-        $("#searchInput").on("click", function () {
-            $("input[name=name]").prop("checked", false);
+        $("input[name=job]").on("change", function () {
+
+            let job = $(this).val();
+
+            if (job == "student") {
+                $("#companyInput").hide();
+                $("#schoolInput").show();
+                // $("#title").text("학교명");
+            } else {
+                $("#schoolInput").hide();
+                $("#companyInput").show();
+                // $("#title").text("회사명")
+            }
         });
 
-        $("radio").on("click", function () {
-
-
-        });
         // 1번
         $("#colorSelect").on("click", function () {
             let color = $(this).val();
