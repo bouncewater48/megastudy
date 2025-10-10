@@ -1,0 +1,36 @@
+#wrap {
+    width: 960px;
+    height: 1000px;
+    margin:0 auto;
+}
+
+header {
+    height: 100px;
+}
+
+.main-menu {
+    height: 30px;
+}
+
+.contents > .banner {
+    height: 400px;
+}
+
+.Menu2 > .reserve {
+    width: 300px;
+    height: 250px;
+}
+
+.Menu2 > .login {
+    width: 500px;
+    height: 250px;
+}
+
+.Menu2 > .reserveNumber {
+    width: 300px;
+    height: 250px;
+}
+
+footer {
+    height: 100px;
+}
